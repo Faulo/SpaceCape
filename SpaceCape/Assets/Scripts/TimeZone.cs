@@ -13,7 +13,6 @@ public class TimeZone : MonoBehaviour
         collider.GetComponents<ITimeable>()
             .ForAll(timeable => timeable.timeScale = timeScale);
     }
-
     public void OnTriggerExit(Collider collider) {
         collider.GetComponents<ITimeable>()
             .ForAll(timeable => timeable.timeScale = TimeScale.Normal);
