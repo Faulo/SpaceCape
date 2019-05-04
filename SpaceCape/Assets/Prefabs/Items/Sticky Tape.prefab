@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5754689535433292597
+--- !u!1 &8765650066690486502
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8757137859955018022}
-  - component: {fileID: 350327234129654544}
-  - component: {fileID: 6332084888014589929}
-  - component: {fileID: 4394720155919105678}
-  - component: {fileID: 4394720155919105713}
-  - component: {fileID: 4394720155919105679}
-  - component: {fileID: 4394720155919105676}
-  - component: {fileID: 4394720155919105677}
+  - component: {fileID: 5764187045700420341}
+  - component: {fileID: 3649471700047689923}
+  - component: {fileID: 7032667994038010938}
+  - component: {fileID: 5087888707874052177}
+  - component: {fileID: 1692182340763947598}
+  - component: {fileID: 3012851829535551971}
+  - component: {fileID: 6341123325712650912}
+  - component: {fileID: 1741622377900303489}
   m_Layer: 0
-  m_Name: Toolbox_Shiny
+  m_Name: Tape_Sticky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8757137859955018022
+--- !u!4 &5764187045700420341
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
+  m_GameObject: {fileID: 8765650066690486502}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 1.7, z: -2.04}
+  m_LocalPosition: {x: 0, y: 7.54, z: -0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &350327234129654544
+--- !u!33 &3649471700047689923
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
-  m_Mesh: {fileID: -5495902117074765545, guid: ef258ce8653c243478a862f1703844e6, type: 3}
---- !u!23 &6332084888014589929
+  m_GameObject: {fileID: 8765650066690486502}
+  m_Mesh: {fileID: 2534964839176971238, guid: 2e9cfbabd4a9e9445ad26bddf4c70688, type: 3}
+--- !u!23 &7032667994038010938
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
+  m_GameObject: {fileID: 8765650066690486502}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: ef258ce8653c243478a862f1703844e6, type: 3}
+  - {fileID: 670224309865224971, guid: 2e9cfbabd4a9e9445ad26bddf4c70688, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,13 +82,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4394720155919105678
+--- !u!54 &5087888707874052177
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
+  m_GameObject: {fileID: 8765650066690486502}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -98,39 +98,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4394720155919105713
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.030328495, y: 0.020876575, z: 0.021048002}
-  m_Center: {x: 0, y: 0, z: -0.00052400294}
---- !u!114 &4394720155919105679
+--- !u!114 &1692182340763947598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa2887ba4be9cb4e80b85129d531827, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: Toolbox_Shiny
---- !u!114 &4394720155919105676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
+  m_GameObject: {fileID: 8765650066690486502}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cf078f317a2d764dabcc5e60e7e02d6, type: 3}
@@ -138,17 +112,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reversedObject: {fileID: 0}
   slowedObject: {fileID: 0}
-  forwardedObject: {fileID: 1516958205692221510, guid: eab93d63487f93143ac21b95066e0e4a,
+  forwardedObject: {fileID: 385394329576857670, guid: 448d4ef5a75ba4dd1a52dd6287a4ae69,
     type: 3}
---- !u!114 &4394720155919105677
+--- !u!114 &3012851829535551971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5754689535433292597}
+  m_GameObject: {fileID: 8765650066690486502}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e2fe8271a3d87e47bee09cc490e0e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6341123325712650912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765650066690486502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa2887ba4be9cb4e80b85129d531827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: Sticky Tape
+--- !u!135 &1741622377900303489
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765650066690486502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0011901468
+  m_Center: {x: 0.00007290453, y: -0.00011635184, z: 0.0000008906424}
