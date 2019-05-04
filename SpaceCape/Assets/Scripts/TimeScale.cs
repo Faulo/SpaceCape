@@ -14,7 +14,7 @@ public static class TimeScaleExtensions {
     public static void ApplyTimeScale(this TimeScale timeScale) {
         switch (timeScale) {
             case TimeScale.Faster:
-                Time.timeScale = 3.0f;
+                Time.timeScale = 2.0f;
                 break;
             case TimeScale.Slower:
                 Time.timeScale = 0.5f;

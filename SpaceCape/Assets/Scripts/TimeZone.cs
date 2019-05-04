@@ -9,7 +9,7 @@ public class TimeZone : MonoBehaviour
     [SerializeField]
     private TimeScale timeScale;
 
-    public void OnTriggerEnter(Collider collider) {
+    public void OnTriggerStay(Collider collider) {
         collider.GetComponents<ITimeable>()
             .ForAll(timeable => timeable.timeScale = timeScale);
     }
