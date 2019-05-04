@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 575339922451082274}
   - component: {fileID: 6279470217644435570}
   - component: {fileID: 8315974229200919027}
-  - component: {fileID: -4764972328261190381}
+  - component: {fileID: 5125318527865632231}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Kartoffel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,8 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa2887ba4be9cb4e80b85129d531827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: Testobjekt
---- !u!114 &-4764972328261190381
+  label: Kartoffel
+  hasMerged: 0
+--- !u!114 &5125318527865632231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +146,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 463464046049747294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e85cd90da12235e41be21ef1a8042506, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cf078f317a2d764dabcc5e60e7e02d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}

@@ -31,4 +31,10 @@ public class InteractableObject : MonoBehaviour
             .Where(interactable => ItemCombinationController.instance.TryToMerge(this, interactable))
             .Any();
     }
+    private void OnMouseOver() {
+        FindObjectOfType<HUD>().itemText = label;
+    }
+    private void OnMouseExit() {
+        FindObjectOfType<HUD>().itemText = "";
+    }
 }
