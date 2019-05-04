@@ -1,4 +1,13 @@
 #
+# Custom
+#
+*/ProCore/
+*/Logs/
+*/Packages/
+*/ProjectSettings/
+
+
+#
 # == Windows ==
 #
 
