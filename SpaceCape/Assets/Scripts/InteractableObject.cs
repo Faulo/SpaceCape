@@ -8,18 +8,23 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     public string label = "Testobjekt";
 
-    public bool hasMerged = false;
+    public bool hasMerged { set; get; }
 
-    // Start is called before the first frame update
+    private MoveController controller;
+    private HUD hud;
+    private bool displayLabel;
+
     void Start()
     {
-        
+        controller = FindObjectOfType<MoveController>();
+        hud = FindObjectOfType<HUD>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (displayLabel && controller.InRange(transform)) {
+            hud.itemText = label;
+        }
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -32,9 +37,10 @@ public class InteractableObject : MonoBehaviour
             .Any();
     }
     private void OnMouseOver() {
-        FindObjectOfType<HUD>().itemText = label;
+        displayLabel = true;
     }
     private void OnMouseExit() {
-        FindObjectOfType<HUD>().itemText = "";
+        displayLabel = false;
+        hud.itemText = "";
     }
 }
