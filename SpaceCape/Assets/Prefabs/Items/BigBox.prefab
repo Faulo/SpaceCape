@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3080251262746331152}
   - component: {fileID: 6141177840204800469}
   m_Layer: 0
-  m_Name: BuddyBox
+  m_Name: BigBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 963126450167110505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 3330002725848307328}
   m_Father: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa2887ba4be9cb4e80b85129d531827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: Buddy Box
+  label: Big Box
 --- !u!114 &6141177840204800469
 MonoBehaviour:
   m_ObjectHideFlags: 0

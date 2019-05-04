@@ -5,7 +5,7 @@ using UnityEngine;
 public class CombinableItem : MonoBehaviour
 {
     [SerializeField]
-    private MoveableObject source;
+    private Dictionary<GameObject, GameObject> combinesTo = new Dictionary<GameObject, GameObject>();
 
     // Start is called before the first frame update
     void Start()
