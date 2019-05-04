@@ -25,7 +25,7 @@ public class ItemCombinationController : ScriptableObject {
                 var c = Instantiate(
                     combination.resultsIn,
                     (a.transform.position + b.transform.position) / 2,
-                    Quaternion.identity
+                    combination.sourceItem.transform.rotation
                 );
                 a.hasMerged = true;
                 b.hasMerged = true;
