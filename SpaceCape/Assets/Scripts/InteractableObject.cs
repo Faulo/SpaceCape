@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     [SerializeField]
-    private string label = "Testobjekt";
+    public string label = "Testobjekt";
 
     // Start is called before the first frame update
     void Start()
