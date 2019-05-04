@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c00c32e16b694426d9ed059a6569bbff
+=======
+guid: a052bbb21ff118b49ac1a0bc8ef2fa1c
+>>>>>>> panel fix
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []

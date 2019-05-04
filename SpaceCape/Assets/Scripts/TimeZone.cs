@@ -9,8 +9,11 @@ public class TimeZone : MonoBehaviour
     [SerializeField]
     private TimeScale timeScale;
 
-    [SerializeField]
-    private AudioSource sfx;
+    private AudioSource sfx {
+        get {
+            return GetComponent<AudioSource>();
+        }
+    }
 
     public void OnTriggerStay(Collider collider) {
         collider.GetComponents<ITimeable>()

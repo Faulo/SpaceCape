@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ItemCombinations
   m_EditorClassIdentifier: 
   itemCombinations:
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
+  - sourceItem: {fileID: 1714709293028693958, guid: f8430b37913e71646b9c66f228e59597,
       type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
+    combinedWith: {fileID: 6341123325712650912, guid: 4c3c766dedc9446f88bddf5ad4e4b71f,
       type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
+    resultsIn: {fileID: 531248405226605073, guid: 5ebd674d522841d48ab2859a972cb2ae,
       type: 3}
   - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
       type: 3}
