@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
+    [SerializeField]
+    private float range = 3;
+
     private Transform guide;
     private MoveableObject item;
     // Start is called before the first frame update
@@ -15,6 +18,10 @@ public class MoveController : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
+    }
+
+    public bool InRange(Transform t) {
+        return Vector3.Distance(transform.position, t.position) < range;
     }
 
     public void Pickup(MoveableObject newItem) {
