@@ -83,7 +83,6 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
             {
                 if (sfx != null)
                 {
-                    Debug.Log("Attempting to play sound");
                     sfx.Play();
                 }
             }
