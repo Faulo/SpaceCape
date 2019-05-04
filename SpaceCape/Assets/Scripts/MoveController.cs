@@ -38,12 +38,15 @@ public class MoveController : MonoBehaviour
     }
     public void Drop() {
         if (item != null) {
-            item.GetComponents<Rigidbody>()
+            if (item.isActiveAndEnabled) {
+                item.GetComponents<Rigidbody>()
                 .ForAll(body => {
                     body.useGravity = true;
                     body.isKinematic = false;
                 });
-            item.transform.parent = transform.parent;
+                item.transform.parent = transform.parent;
+                item = null;
+            }
         }
     }
 }
