@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: Toolbox_Shiny
-  hasMerged: 0
 --- !u!114 &4394720155919105676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf078f317a2d764dabcc5e60e7e02d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reversedObject: {fileID: 0}
+  slowedObject: {fileID: 0}
+  forwardedObject: {fileID: 1516958205692221510, guid: eab93d63487f93143ac21b95066e0e4a,
+    type: 3}
 --- !u!114 &4394720155919105677
 MonoBehaviour:
   m_ObjectHideFlags: 0
