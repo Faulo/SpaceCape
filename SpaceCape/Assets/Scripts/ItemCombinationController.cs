@@ -31,6 +31,7 @@ public class ItemCombinationController : ScriptableObject {
                 b.hasMerged = true;
                 Destroy(a.gameObject);
                 Destroy(b.gameObject);
+                
                 return true;
             });
     }
