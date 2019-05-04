@@ -4,11 +4,40 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class TimeablePhysics : MonoBehaviour, ITimeable {
+    [SerializeField]
+    private GameObject reversedObject;
+
+    [SerializeField]
+    private GameObject slowedObject;
+
+    [SerializeField]
+    private GameObject forwardedObject;
+
+    private float transitionTime = 1;
+    private float transitionTimer;
+    private GameObject transitionObject {
+        get {
+            switch (timeScale) {
+                case TimeScale.Slower:
+                    return slowedObject;
+                case TimeScale.Normal:
+                    return null;
+                case TimeScale.Faster:
+                    return forwardedObject;
+                case TimeScale.Reverse:
+                    return reversedObject;
+            }
+            throw new System.Exception("wtf: " + timeScale);
+        }
+    }
     public TimeScale timeScale { get {
             return sanitizedTimeScale;
         }
         set {
-            sanitizedTimeScale = value;
+            if (sanitizedTimeScale != value) {
+                sanitizedTimeScale = value;
+                transitionTimer = 0;
+            }
         }
     }
     private TimeScale sanitizedTimeScale;
@@ -36,10 +65,16 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
     void FixedUpdate() {
         rigidbody.drag = drags[timeScale];
         rigidbody.AddForce(-Vector3.up * Physics.gravity.magnitude * gravities[timeScale]);
-        //timeScale.ApplyTimeScale();
     }
 
     void LateUpdate() {
-        //timeScale.RestoreTimeScale();
+        if (transitionObject != null) {
+            transitionTimer += Time.deltaTime;
+            if (transitionTimer > transitionTime) {
+                transitionTimer = 0;
+                Instantiate(transitionObject, transform.position, transform.rotation, transform.parent);
+                Destroy(gameObject);
+            }
+        }
     }
 }
