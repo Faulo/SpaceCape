@@ -6,6 +6,8 @@ using UnityEngine;
 public class MoveableObject : MonoBehaviour {
     private MoveController controller;
 
+    private bool pickedUp = false;
+
     // Start is called before the first frame update
     void Start() {
         controller = FindObjectOfType<MoveController>();
@@ -14,10 +16,16 @@ public class MoveableObject : MonoBehaviour {
     private void OnMouseDown() {
         if (controller.InRange(transform)) {
             controller.Pickup(this);
+            pickedUp = true;
         }
     }
 
-    private void OnMouseUp() {
-        controller.Drop();
+    public void OnMouseUp() {
+        if (pickedUp) {
+            controller.Drop();
+        }
+    }
+    private void OnDestroy() {
+        OnMouseUp();
     }
 }

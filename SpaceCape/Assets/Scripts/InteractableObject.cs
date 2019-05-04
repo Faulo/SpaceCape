@@ -40,7 +40,12 @@ public class InteractableObject : MonoBehaviour
         displayLabel = true;
     }
     private void OnMouseExit() {
-        displayLabel = false;
-        hud.itemText = "";
+        if (displayLabel) {
+            displayLabel = false;
+            hud.itemText = "";
+        }
+    }
+    private void OnDestroy() {
+        OnMouseExit();
     }
 }

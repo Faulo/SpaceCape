@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe3e0e9cc5b1d94fb96fa9be95df0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 4
 --- !u!114 &5838546639927834164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf078f317a2d764dabcc5e60e7e02d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reversedObject: {fileID: 0}
+  slowedObject: {fileID: 0}
+  forwardedObject: {fileID: 0}
 --- !u!1 &2732261470684020926
 GameObject:
   m_ObjectHideFlags: 0

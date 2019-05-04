@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Extensions;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -58,8 +60,11 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
 
     private new Rigidbody rigidbody;
 
+    private Vector3 backupScale;
+
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
+        backupScale = transform.localScale;
     }
 
     void FixedUpdate() {
@@ -74,6 +79,8 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
                 transitionTimer = 0;
                 Instantiate(transitionObject, transform.position, transform.rotation, transform.parent);
                 Destroy(gameObject);
+            } else {
+                transform.localScale = backupScale * (1f + 0.1f * Mathf.Sin(2 * (float)Math.PI * transitionTimer / transitionTime));
             }
         }
     }
