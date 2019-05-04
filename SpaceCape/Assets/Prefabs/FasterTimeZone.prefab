@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeScale: 1
+  sfx: {fileID: 4649370305443631341, guid: 4f3a32e2e706641dd8c380df1cf89b67, type: 3}

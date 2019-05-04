@@ -43,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         public TimeScale timeScale { get; set; }
+        public AudioSource sfx { get; set; }
 
         // Use this for initialization
         private void Start()

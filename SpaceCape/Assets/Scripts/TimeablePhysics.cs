@@ -15,7 +15,9 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
     [SerializeField]
     private GameObject forwardedObject;
 
-    private float transitionTime = 1;
+    private bool forward = false;
+    private bool rewind = false;
+    private float transitionTime = 2.0f;
     private float transitionTimer;
     private GameObject transitionObject {
         get {
@@ -33,7 +35,7 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
         }
     }
     public TimeScale timeScale { get {
-            return sanitizedTimeScale;
+            return sanitizedTimeScale; 
         }
         set {
             if (sanitizedTimeScale != value) {
@@ -42,6 +44,8 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
             }
         }
     }
+
+    public AudioSource sfx { get; set; }
     private TimeScale sanitizedTimeScale;
 
     private Dictionary<TimeScale, float> drags = new Dictionary<TimeScale, float> {
@@ -65,6 +69,7 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
         backupScale = transform.localScale;
+        sfx = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() {
@@ -74,6 +79,14 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
 
     void LateUpdate() {
         if (transitionObject != null) {
+            if(transitionTimer == 0.0f)
+            {
+                if (sfx != null)
+                {
+                    Debug.Log("Attempting to play sound");
+                    sfx.Play();
+                }
+            }
             transitionTimer += Time.deltaTime;
             if (transitionTimer > transitionTime) {
                 transitionTimer = 0;
