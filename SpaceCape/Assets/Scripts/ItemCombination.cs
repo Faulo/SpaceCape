@@ -8,6 +8,7 @@ public class ItemCombination {
     public InteractableObject sourceItem;
     public InteractableObject combinedWith;
     public InteractableObject resultsIn;
+    public bool isStationary;
 
     public bool isValid {
         get {

@@ -12,7 +12,7 @@ public class MoveController : MonoBehaviour
     private MoveableObject item;
     // Start is called before the first frame update
     void Start() {
-        guide = transform.GetChild(0).Find("Guide");
+        guide = transform.GetChild(0).Find("Carry");
     }
 
     // Update is called once per frame

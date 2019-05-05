@@ -18,7 +18,17 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
     private bool forward = false;
     private bool rewind = false;
     private float transitionTime = 2.0f;
-    private float transitionTimer;
+    private float transitionTimer {
+        get {
+            return sanitizedTransitionTimer;
+        }
+        set {
+            transform.localScale = backupScale * (1f + 0.1f * Mathf.Sin(2 * (float) Math.PI * value / transitionTime));
+            sanitizedTransitionTimer = value;
+        }
+    }
+    private float sanitizedTransitionTimer;
+
     private GameObject transitionObject {
         get {
             switch (timeScale) {
@@ -34,7 +44,8 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
             throw new System.Exception("wtf: " + timeScale);
         }
     }
-    public TimeScale timeScale { get {
+    public TimeScale timeScale {
+        get {
             return sanitizedTimeScale; 
         }
         set {
@@ -44,14 +55,14 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
             }
         }
     }
+    private TimeScale sanitizedTimeScale;
 
     public AudioSource sfx { get; set; }
-    private TimeScale sanitizedTimeScale;
 
     private Dictionary<TimeScale, float> drags = new Dictionary<TimeScale, float> {
         { TimeScale.Slower, 10 },
-        { TimeScale.Normal, 1 },
-        { TimeScale.Reverse, 0 },
+        { TimeScale.Normal, 0.5f },
+        { TimeScale.Reverse, 0.5f },
         { TimeScale.Faster, 0 }
     };
 
@@ -69,7 +80,6 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
         backupScale = transform.localScale;
-        sfx = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() {
@@ -91,8 +101,6 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
                 transitionTimer = 0;
                 Instantiate(transitionObject, transform.position, transform.rotation, transform.parent);
                 Destroy(gameObject);
-            } else {
-                transform.localScale = backupScale * (1f + 0.1f * Mathf.Sin(2 * (float)Math.PI * transitionTimer / transitionTime));
             }
         }
     }
