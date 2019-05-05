@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class TimeablePhysics : MonoBehaviour, ITimeable {
     [SerializeField]
     private GameObject reversedObject;
@@ -71,12 +70,15 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
         { TimeScale.Faster, 10.0f }
     };
 
-    private new Rigidbody rigidbody;
+    private new Rigidbody rigidbody {
+        get {
+            return GetComponentInChildren<Rigidbody>();
+        }
+    }
 
     private Vector3 backupScale;
 
     void Start() {
-        rigidbody = GetComponent<Rigidbody>();
         backupScale = transform.localScale;
     }
 
