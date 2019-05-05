@@ -24,7 +24,7 @@ public class CubeSpawner : MonoBehaviour
         spawnTimer -= Time.deltaTime;
         if (spawnTimer < 0) {
             spawnTimer += spawnRate;
-            Instantiate(cubePrefab, transform.position, Quaternion.identity);
+            Instantiate(cubePrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody>().AddForce(1000*Vector3.down);
         }
     }
 }
