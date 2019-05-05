@@ -11,13 +11,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 5428250928199625666, guid: 17f108a20c0509349ba615bb6568b356,
+      objectReference: {fileID: -3347532246080073139, guid: 0bba430b00abf42df9f10eaa23182806,
         type: 3}
     - target: {fileID: 8312508849639154399, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d65f273cdc7e56d4ea40086a7ec2d931, type: 2}
+      objectReference: {fileID: 2100000, guid: a3ccf5b9af78a4da58a770316fa096f9, type: 2}
     - target: {fileID: -4128229454672538652, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: label
@@ -87,7 +87,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 5428250928199625666, guid: 17f108a20c0509349ba615bb6568b356,
+      objectReference: {fileID: -3347532246080073139, guid: 0bba430b00abf42df9f10eaa23182806,
         type: 3}
     - target: {fileID: -5789059182036775520, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
