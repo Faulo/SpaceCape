@@ -13,73 +13,21 @@ MonoBehaviour:
   m_Name: ItemCombinations
   m_EditorClassIdentifier: 
   itemCombinations:
-  - sourceItem: {fileID: 1714709293028693958, guid: f8430b37913e71646b9c66f228e59597,
+  - sourceItem: {fileID: 6491340320886064177, guid: c392c0f58ed244b60bc6246ebcc82904,
       type: 3}
-    combinedWith: {fileID: 6341123325712650912, guid: 4c3c766dedc9446f88bddf5ad4e4b71f,
+    combinedWith: {fileID: 6730537707029098952, guid: 73f2f187f65cc4c5c8f936a1210ea552,
       type: 3}
-    resultsIn: {fileID: 531248405226605073, guid: 5ebd674d522841d48ab2859a972cb2ae,
+    resultsIn: {fileID: 681060155389039348, guid: 19157ee67ae9142278a6c0ef83919fa9,
       type: 3}
-    isStationary: 1
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
+  - sourceItem: {fileID: 7915345760712217541, guid: 10703cfa332deba47becc16602abcc74,
       type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
+    combinedWith: {fileID: 7915345760712217541, guid: 10703cfa332deba47becc16602abcc74,
       type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
+    resultsIn: {fileID: 8188576125258320116, guid: 69cf822b72665044da9d29b885f10828,
       type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
+  - sourceItem: {fileID: 8188576125258320116, guid: 69cf822b72665044da9d29b885f10828,
       type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
+    combinedWith: {fileID: 8188576125258320116, guid: 69cf822b72665044da9d29b885f10828,
       type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
+    resultsIn: {fileID: 8188576125258320116, guid: d2ff7bb1352ef674a8d1eadef8e062aa,
       type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0
-  - sourceItem: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    combinedWith: {fileID: 3080251262746331152, guid: 0073e55180ecbcb499ca196d497db306,
-      type: 3}
-    resultsIn: {fileID: 3080251262746331152, guid: 7fd4ba995b6781a48b6e2cbb1c779d32,
-      type: 3}
-    isStationary: 0

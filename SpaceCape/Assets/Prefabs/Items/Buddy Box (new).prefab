@@ -1,6 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1770733946621819150
+--- !u!114 &2049099044665227922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980077080884096577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20958f50853d1d4428a56df287a72a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: MatzeScene
+--- !u!1001 &2797316029008266160
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,38 +23,22 @@ PrefabInstance:
     - target: {fileID: 1291973574802697713, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_Name
-      value: Chair
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291973574802697713, guid: b9da8fee94efdca48b1d41bac41741e7,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524229650768869297, guid: b9da8fee94efdca48b1d41bac41741e7,
-        type: 3}
-      propertyPath: m_Mass
-      value: 4
+      value: Buddy Box (new)
       objectReference: {fileID: 0}
     - target: {fileID: 8337530061836999673, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 5428250928199625666, guid: da041916dec0c418a8df116ae5b68636,
-        type: 3}
+      objectReference: {fileID: 4300004, guid: ef6178546f77bc546af127fb4c56da0c, type: 3}
     - target: {fileID: 8312508849639154399, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fa1f39023560220439bfa089ef4808e8, type: 2}
-    - target: {fileID: 8312508849639154399, guid: b9da8fee94efdca48b1d41bac41741e7,
-        type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: cb113bd12cc77f84495cc79b860120d3, type: 2}
     - target: {fileID: -4128229454672538652, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: label
-      value: Chair
+      value: Buddy Box (new)
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -61,7 +58,7 @@ PrefabInstance:
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -76,7 +73,7 @@ PrefabInstance:
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -86,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -100,15 +97,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5789059182036775520, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
-      propertyPath: reversedObject
+      propertyPath: forwardedObject
       value: 
-      objectReference: {fileID: 4216322776339541456, guid: 10703cfa332deba47becc16602abcc74,
+      objectReference: {fileID: 9216000726952437978, guid: 9c03ad875e53744f0be372860cc5766c,
         type: 3}
     - target: {fileID: 3071507232179519168, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 5428250928199625666, guid: da041916dec0c418a8df116ae5b68636,
-        type: 3}
+      objectReference: {fileID: 4300004, guid: ef6178546f77bc546af127fb4c56da0c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9da8fee94efdca48b1d41bac41741e7, type: 3}
+--- !u!1 &3980077080884096577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1291973574802697713, guid: b9da8fee94efdca48b1d41bac41741e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2797316029008266160}
+  m_PrefabAsset: {fileID: 0}

@@ -22,7 +22,7 @@ public class ItemCombinationController : ScriptableObject {
                 || combination.sourceItem.label == b.label && combination.combinedWith.label == a.label
             )
             .Any(combination => {
-                var c = Instantiate(combination.resultsIn, combination.resultPosition, combination.resultRotation);
+                var c = Instantiate(combination.resultsIn, combination.CalculatePosition(a, b), combination.CalculateRotation(a, b));
 
                 a.hasMerged = true;
                 b.hasMerged = true;

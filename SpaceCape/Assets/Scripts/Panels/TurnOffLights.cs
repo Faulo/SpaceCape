@@ -8,6 +8,6 @@ public class TurnOffLights : MonoBehaviour
     void Start()
     {
         FindObjectsOfType<ToggleableLight>()
-            .ForAll(light => light.TurnOff());
+            .ForAll(light => light.TurnOn());
     }
 }
