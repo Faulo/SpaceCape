@@ -15,8 +15,6 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
     [SerializeField]
     private GameObject forwardedObject;
 
-    private bool forward = false;
-    private bool rewind = false;
     private float transitionTime = 2.0f;
     private float transitionTimer {
         get {

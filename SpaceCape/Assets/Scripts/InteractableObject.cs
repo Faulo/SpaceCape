@@ -28,13 +28,12 @@ public class InteractableObject : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (hasMerged) {
-            return;
+        if (!hasMerged) {
+            collision.gameObject
+                .GetComponents<InteractableObject>()
+                .Where(interactable => ItemCombinationController.instance.TryToMerge(this, interactable))
+                .Any();
         }
-        collision.gameObject
-            .GetComponents<InteractableObject>()
-            .Where(interactable => ItemCombinationController.instance.TryToMerge(this, interactable))
-            .Any();
     }
     private void OnMouseOver() {
         displayLabel = true;
