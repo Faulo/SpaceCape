@@ -1,20 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5152499754743966227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864055876335348807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b62c5879a9a32764c996dae2a55fe96c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 0}
-  itemAmount: 2
---- !u!1001 &590103417406144950
+--- !u!1001 &8225366215292920762
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -31,17 +17,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-<<<<<<< HEAD
       objectReference: {fileID: 2100000, guid: a3ccf5b9af78a4da58a770316fa096f9, type: 2}
-=======
-      objectReference: {fileID: 2100000, guid: d65f273cdc7e56d4ea40086a7ec2d931, type: 2}
-    - target: {fileID: -5789059182036775520, guid: b9da8fee94efdca48b1d41bac41741e7,
-        type: 3}
-      propertyPath: reversedObject
-      value: 
-      objectReference: {fileID: 8026007331369273736, guid: feb0ee3b1ee9c5b4fb6d1f796a2f1e73,
-        type: 3}
->>>>>>> 3ff98221ce0bfe7106f59440beac6d2d1e753595
     - target: {fileID: -4128229454672538652, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: label
@@ -115,9 +91,3 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9da8fee94efdca48b1d41bac41741e7, type: 3}
---- !u!1 &1864055876335348807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1291973574802697713, guid: b9da8fee94efdca48b1d41bac41741e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 590103417406144950}
-  m_PrefabAsset: {fileID: 0}
