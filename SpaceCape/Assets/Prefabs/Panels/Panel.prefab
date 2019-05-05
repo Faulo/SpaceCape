@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2519072368706949089}
   - component: {fileID: 3360851248446975677}
+  - component: {fileID: 7638308447881410564}
   - component: {fileID: 2812196160521436242}
   - component: {fileID: 5978093515045474081}
   - component: {fileID: -2618682029641774808}
@@ -47,6 +48,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: Test Panel
+--- !u!114 &7638308447881410564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282901287749211651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14edcfa647955d4f9ad29647379d890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &2812196160521436242
 MeshFilter:
   m_ObjectHideFlags: 0
