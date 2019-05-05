@@ -22,21 +22,7 @@ public class ItemCombinationController : ScriptableObject {
                 || combination.sourceItem.label == b.label && combination.combinedWith.label == a.label
             )
             .Any(combination => {
-                var sourceItem = combination.sourceItem.label == a.label
-                    ? a
-                    : b;
-                Vector3 position;
-                Quaternion rotation;
-
-                if (combination.isStationary) {
-                    position = sourceItem.transform.position;
-                    rotation = sourceItem.transform.rotation;
-                } else {
-                    position = (a.transform.position + b.transform.position) / 2;
-                    rotation = Quaternion.Slerp(a.transform.rotation, b.transform.rotation, 0.5f);
-                }
-
-                var c = Instantiate(combination.resultsIn, position, rotation);
+                var c = Instantiate(combination.resultsIn, combination.resultPosition, combination.resultRotation);
 
                 a.hasMerged = true;
                 b.hasMerged = true;
