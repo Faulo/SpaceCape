@@ -21,12 +21,12 @@ PrefabInstance:
     - target: {fileID: -4128229454672538652, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: label
-      value: Open Toolbox
+      value: Rusty Toolbox
       objectReference: {fileID: 0}
     - target: {fileID: 1291973574802697713, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_Name
-      value: Open Toolbox
+      value: Rusty Toolbox
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -46,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 3578969306086617148, guid: b9da8fee94efdca48b1d41bac41741e7,
         type: 3}
@@ -88,6 +88,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 5428250928199625666, guid: 17f108a20c0509349ba615bb6568b356,
+        type: 3}
+    - target: {fileID: -5789059182036775520, guid: b9da8fee94efdca48b1d41bac41741e7,
+        type: 3}
+      propertyPath: reversedObject
+      value: 
+      objectReference: {fileID: 8026007331369273736, guid: feb0ee3b1ee9c5b4fb6d1f796a2f1e73,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9da8fee94efdca48b1d41bac41741e7, type: 3}
