@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.Characters.FirstPerson {
+namespace SpaceCape.FirstPersonCharacter {
     [Serializable]
     public class MouseLook {
         public float XSensitivity = 2f;

@@ -1,5 +1,7 @@
-﻿public interface ITransitionable {
-    void OnReverse();
-    void OnForward();
-    void OnSlower();
+namespace SpaceCape.Items {
+    public interface ITransitionable {
+        void OnReverse();
+        void OnForward();
+        void OnSlower();
+    }
 }

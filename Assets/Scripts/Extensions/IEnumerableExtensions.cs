@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Extensions {
+namespace SpaceCape.Extensions {
     public static class IEnumerableExtensions {
         public static void ForAll<T>(this IEnumerable<T> source, Action<T> action) {
             foreach (var item in source) {
