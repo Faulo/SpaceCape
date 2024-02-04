@@ -1,0 +1,17 @@
+{
+    "name": "SpaceCape",
+    "rootNamespace": "",
+    "references": [
+        "Unity.TextMeshPro",
+        "UnityStandardAssets"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
