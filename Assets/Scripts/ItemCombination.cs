@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
@@ -18,18 +16,22 @@ public class ItemCombination {
         if (a.GetComponent<ImmoveableObject>()) {
             return a.transform.position;
         }
+
         if (b.GetComponent<ImmoveableObject>()) {
             return b.transform.position;
         }
+
         return (a.transform.position + b.transform.position) / 2;
     }
     public Quaternion CalculateRotation(InteractableObject a, InteractableObject b) {
         if (a.GetComponent<ImmoveableObject>()) {
             return a.transform.rotation;
         }
+
         if (b.GetComponent<ImmoveableObject>()) {
             return b.transform.rotation;
         }
+
         return Quaternion.Slerp(a.transform.rotation, b.transform.rotation, 0.5f);
     }
 }

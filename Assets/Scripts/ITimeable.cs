@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public interface ITimeable 
-{
+public interface ITimeable {
     TimeScale timeScale { get; set; }
     AudioSource sfx { get; set; }
 }

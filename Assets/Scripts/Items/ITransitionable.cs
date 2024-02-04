@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface ITransitionable {
+﻿public interface ITransitionable {
     void OnReverse();
     void OnForward();
     void OnSlower();

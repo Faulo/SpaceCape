@@ -1,29 +1,27 @@
 ﻿using Extensions;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
 
-public class TimeZone : MonoBehaviour
-{
+public class TimeZone : MonoBehaviour {
     [SerializeField]
-    private TimeScale timeScale;
+    TimeScale timeScale;
 
-    private AudioSource sfx {
+    AudioSource sfx {
         get {
             return GetComponent<AudioSource>();
         }
     }
 
-    public void OnTriggerStay(Collider collider) {
+    protected void OnTriggerStay(Collider collider) {
         collider.GetComponents<ITimeable>()
-            .ForAll(timeable => { timeable.timeScale = timeScale; timeable.sfx = sfx; });
+            .ForAll(timeable => {
+                timeable.timeScale = timeScale;
+                timeable.sfx = sfx;
+            });
     }
-    public void OnTriggerExit(Collider collider) {
+    protected void OnTriggerExit(Collider collider) {
         collider.GetComponents<ITimeable>()
             .ForAll(timeable => timeable.timeScale = TimeScale.Normal);
-        if(sfx != null && sfx.isPlaying)
-        {
+        if (sfx != null && sfx.isPlaying) {
             sfx.Stop();
         }
     }

@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public enum TimeScale
-{
+public enum TimeScale {
     Normal,
     Faster,
     Slower,
@@ -24,6 +21,7 @@ public static class TimeScaleExtensions {
                 Time.timeScale = 1.0f;
                 break;
         }
+
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
     public static void RestoreTimeScale(this TimeScale timeScale) {

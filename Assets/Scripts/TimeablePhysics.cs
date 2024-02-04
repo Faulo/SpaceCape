@@ -1,49 +1,43 @@
-﻿using Extensions;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeablePhysics : MonoBehaviour, ITimeable {
     [SerializeField]
-    private GameObject reversedObject;
+    GameObject reversedObject;
 
     [SerializeField]
-    private GameObject slowedObject;
+    GameObject slowedObject;
 
     [SerializeField]
-    private GameObject forwardedObject;
+    GameObject forwardedObject;
 
-    private float transitionTime = 2.0f;
-    private float transitionTimer {
+    float transitionTime = 2.0f;
+    float transitionTimer {
         get {
             return sanitizedTransitionTimer;
         }
         set {
-            transform.localScale = backupScale * (1f + 0.1f * Mathf.Sin(2 * (float) Math.PI * value / transitionTime));
+            transform.localScale = backupScale * (1f + (0.1f * Mathf.Sin(2 * (float)Math.PI * value / transitionTime)));
             sanitizedTransitionTimer = value;
         }
     }
-    private float sanitizedTransitionTimer;
+    float sanitizedTransitionTimer;
 
-    private GameObject transitionObject {
+    GameObject transitionObject {
         get {
-            switch (timeScale) {
-                case TimeScale.Slower:
-                    return slowedObject;
-                case TimeScale.Normal:
-                    return null;
-                case TimeScale.Faster:
-                    return forwardedObject;
-                case TimeScale.Reverse:
-                    return reversedObject;
-            }
-            throw new System.Exception("wtf: " + timeScale);
+            return timeScale switch {
+                TimeScale.Slower => slowedObject,
+                TimeScale.Normal => null,
+                TimeScale.Faster => forwardedObject,
+                TimeScale.Reverse => reversedObject,
+                _ => throw new System.Exception("wtf: " + timeScale),
+            };
         }
     }
     public TimeScale timeScale {
         get {
-            return sanitizedTimeScale; 
+            return sanitizedTimeScale;
         }
         set {
             if (sanitizedTimeScale != value) {
@@ -52,50 +46,49 @@ public class TimeablePhysics : MonoBehaviour, ITimeable {
             }
         }
     }
-    private TimeScale sanitizedTimeScale;
+    TimeScale sanitizedTimeScale;
 
     public AudioSource sfx { get; set; }
 
-    private Dictionary<TimeScale, float> drags = new Dictionary<TimeScale, float> {
+    Dictionary<TimeScale, float> drags = new Dictionary<TimeScale, float> {
         { TimeScale.Slower, 10 },
         { TimeScale.Normal, 0.5f },
         { TimeScale.Reverse, 0.5f },
         { TimeScale.Faster, 0 }
     };
 
-    private Dictionary<TimeScale, float> gravities = new Dictionary<TimeScale, float> {
+    Dictionary<TimeScale, float> gravities = new Dictionary<TimeScale, float> {
         { TimeScale.Slower, 0.5f },
         { TimeScale.Normal, 1.0f },
         { TimeScale.Reverse, 1.0f },
         { TimeScale.Faster, 10.0f }
     };
 
-    private new Rigidbody rigidbody {
+    new Rigidbody rigidbody {
         get {
             return GetComponentInChildren<Rigidbody>();
         }
     }
 
-    private Vector3 backupScale;
+    Vector3 backupScale;
 
-    void Start() {
+    protected void Start() {
         backupScale = transform.localScale;
     }
 
-    void FixedUpdate() {
+    protected void FixedUpdate() {
         rigidbody.drag = drags[timeScale];
-        rigidbody.AddForce(-Vector3.up * Physics.gravity.magnitude * gravities[timeScale]);
+        rigidbody.AddForce(gravities[timeScale] * Physics.gravity.magnitude * -Vector3.up);
     }
 
-    void LateUpdate() {
+    protected void LateUpdate() {
         if (transitionObject != null) {
-            if(transitionTimer == 0.0f)
-            {
-                if (sfx != null)
-                {
+            if (transitionTimer == 0.0f) {
+                if (sfx != null) {
                     sfx.Play();
                 }
             }
+
             transitionTimer += Time.deltaTime;
             if (transitionTimer > transitionTime) {
                 transitionTimer = 0;

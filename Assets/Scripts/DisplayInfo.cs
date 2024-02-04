@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(InteractableObject))]
-public class DisplayInfo : MonoBehaviour
-{
-    private void OnMouseOver()
-    {
+public class DisplayInfo : MonoBehaviour {
+    protected void OnMouseOver() {
         FindObjectOfType<HUD>().itemText = GetComponent<InteractableObject>().label;
     }
-    private void OnMouseExit()
-    {
+    protected void OnMouseExit() {
         FindObjectOfType<HUD>().itemText = "";
     }
 }

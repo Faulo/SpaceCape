@@ -1,19 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OnSpawnChangeScene : MonoBehaviour
-{
+public class OnSpawnChangeScene : MonoBehaviour {
     [SerializeField]
-    private string sceneToLoad;
+    string sceneToLoad;
 
-    void Start()
-    {
+    protected void Start() {
         StartCoroutine(ChangeRoutine());
     }
 
-    private IEnumerator ChangeRoutine() {
+    IEnumerator ChangeRoutine() {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneToLoad);
     }

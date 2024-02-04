@@ -1,17 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-public class HUD : MonoBehaviour
-{
+public class HUD : MonoBehaviour {
     public string itemText {
         set {
             transform.Find("ItemText").GetComponent<TextMeshProUGUI>().SetText(value);
         }
     }
-    void Start()
-    {
+    protected void Start() {
         itemText = "";
     }
 }

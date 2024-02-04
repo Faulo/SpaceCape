@@ -1,19 +1,21 @@
 ﻿using Extensions;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveController : MonoBehaviour
-{
+public class MoveController : MonoBehaviour {
     [SerializeField]
-    private float range = 3;
+    float range = 3;
 
-    private Transform guide;
-    private MoveableObject item;
+    Transform guide;
+    MoveableObject item;
+    // Start is called before the first frame update
+    protected
     // Start is called before the first frame update
     void Start() {
         guide = transform.GetChild(0).Find("Carry");
     }
+
+    // Update is called once per frame
+    protected
 
     // Update is called once per frame
     void Update() {
@@ -28,6 +30,7 @@ public class MoveController : MonoBehaviour
         if (item != null) {
             Drop();
         }
+
         item = newItem;
         item.GetComponents<Rigidbody>()
             .ForAll(body => {

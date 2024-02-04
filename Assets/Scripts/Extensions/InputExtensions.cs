@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public static class InputExtensions
-{
+public static class InputExtensions {
     public static Vector3 localMousePosition {
         get {
             var backdrop = GameObject.FindGameObjectWithTag("Ground").GetComponent<Collider>();

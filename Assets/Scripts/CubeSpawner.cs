@@ -1,30 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CubeSpawner : MonoBehaviour
-{
+public class CubeSpawner : MonoBehaviour {
     [SerializeField]
-    private GameObject cubePrefab;
+    GameObject cubePrefab;
 
     [SerializeField]
-    private float spawnRate = 1;
+    float spawnRate = 1;
 
-    private float spawnTimer;
+    float spawnTimer;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    protected
+
+    // Start is called before the first frame update
+    void Start() {
         spawnTimer = spawnRate;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    protected
+
+    // Update is called once per frame
+    void Update() {
         spawnTimer -= Time.deltaTime;
         if (spawnTimer < 0) {
             spawnTimer += spawnRate;
-            Instantiate(cubePrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody>().AddForce(1000*Vector3.down);
+            Instantiate(cubePrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody>().AddForce(1000 * Vector3.down);
         }
     }
 }

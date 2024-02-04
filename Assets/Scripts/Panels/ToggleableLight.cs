@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 [RequireComponent(typeof(Light))]
-public class ToggleableLight : MonoBehaviour
-{
+public class ToggleableLight : MonoBehaviour {
     public void TurnOn() {
         GetComponent<Light>().enabled = true;
     }

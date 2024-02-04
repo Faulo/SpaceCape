@@ -1,18 +1,18 @@
 ﻿using Extensions;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnItem : MonoBehaviour {
     [SerializeField]
-    private GameObject itemPrefab;
+    GameObject itemPrefab;
 
     [SerializeField]
-    private int itemAmount = 1;
+    int itemAmount = 1;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    protected
+
+    // Start is called before the first frame update
+    void Start() {
         if (itemPrefab != null) {
             for (int i = 0; i < itemAmount; i++) {
                 Instantiate(itemPrefab, transform.position, transform.rotation)
@@ -23,8 +23,10 @@ public class SpawnItem : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    protected
+
+    // Update is called once per frame
+    void Update() {
+
     }
 }

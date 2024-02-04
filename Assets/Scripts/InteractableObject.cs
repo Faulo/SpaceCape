@@ -1,33 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
-public class InteractableObject : MonoBehaviour
-{
+public class InteractableObject : MonoBehaviour {
     [SerializeField]
     public string label = "Testobjekt";
 
     public bool hasMerged { set; get; }
 
-    private MoveController controller;
-    private HUD hud;
-    private bool displayLabel;
+    MoveController controller;
+    HUD hud;
+    bool displayLabel;
 
-    void Start()
-    {
+    protected void Start() {
         controller = FindObjectOfType<MoveController>();
         hud = FindObjectOfType<HUD>();
     }
 
-    void Update()
-    {
+    protected void Update() {
         if (displayLabel && controller.InRange(transform)) {
             hud.itemText = label;
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
+    void OnCollisionEnter(Collision collision) {
         if (!hasMerged) {
             collision.gameObject
                 .GetComponents<InteractableObject>()
@@ -35,16 +30,16 @@ public class InteractableObject : MonoBehaviour
                 .Any();
         }
     }
-    private void OnMouseOver() {
+    protected void OnMouseOver() {
         displayLabel = true;
     }
-    private void OnMouseExit() {
+    protected void OnMouseExit() {
         if (displayLabel) {
             displayLabel = false;
             hud.itemText = "";
         }
     }
-    private void OnDestroy() {
+    void OnDestroy() {
         OnMouseExit();
     }
 }

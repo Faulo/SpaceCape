@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Extensions {
     public static class IEnumerableExtensions {
         public static void ForAll<T>(this IEnumerable<T> source, Action<T> action) {
-            foreach (T item in source) {
+            foreach (var item in source) {
                 action(item);
             }
         }
         public static IEnumerable<T> Log<T>(this IEnumerable<T> source) {
-            foreach (T item in source) {
+            foreach (var item in source) {
                 UnityEngine.Debug.Log(item);
             }
+
             return source;
         }
         //https://stackoverflow.com/questions/8741439/what-is-the-opposite-method-of-anyt
