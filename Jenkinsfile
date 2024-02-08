@@ -25,6 +25,6 @@ unityPipeline {
     STEAM_CREDENTIALS = ''
     
     // configuration for deploying to itch
-    ITCH_ID = 'faulo/spacecape'
+    ITCH_ID = 'stumbleduck/spacecape'
 	ITCH_CREDENTIALS = 'Faulo-itch.io'
 }
