@@ -16,7 +16,7 @@ namespace SpaceCape.FirstPersonCharacter {
 
         Quaternion m_CharacterTargetRot;
         Quaternion m_CameraTargetRot;
-        bool m_cursorIsLocked = true;
+        public bool cursorIsLocked { get; private set; }
 
         public void Init(Transform character, Transform camera) {
             m_CharacterTargetRot = character.localRotation;
@@ -43,8 +43,6 @@ namespace SpaceCape.FirstPersonCharacter {
                 character.localRotation = m_CharacterTargetRot;
                 camera.localRotation = m_CameraTargetRot;
             }
-
-            UpdateCursorLock();
         }
 
         public void SetCursorLock(bool value) {
@@ -64,15 +62,15 @@ namespace SpaceCape.FirstPersonCharacter {
 
         void InternalLockUpdate() {
             if (Input.GetKeyUp(KeyCode.Escape)) {
-                m_cursorIsLocked = false;
+                cursorIsLocked = false;
             } else if (Input.GetMouseButtonUp(0)) {
-                m_cursorIsLocked = true;
+                cursorIsLocked = true;
             }
 
-            if (m_cursorIsLocked) {
+            if (cursorIsLocked) {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-            } else if (!m_cursorIsLocked) {
+            } else {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }

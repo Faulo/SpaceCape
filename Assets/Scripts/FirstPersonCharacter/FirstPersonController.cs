@@ -16,10 +16,10 @@ namespace SpaceCape.FirstPersonCharacter {
         [SerializeField] float m_GravityMultiplier;
         [SerializeField] MouseLook m_MouseLook;
         [SerializeField] bool m_UseFovKick;
-        [SerializeField] FOVKick m_FovKick = new FOVKick();
+        [SerializeField] FOVKick m_FovKick = new();
         [SerializeField] bool m_UseHeadBob;
-        [SerializeField] CurveControlledBob m_HeadBob = new CurveControlledBob();
-        [SerializeField] LerpControlledBob m_JumpBob = new LerpControlledBob();
+        [SerializeField] CurveControlledBob m_HeadBob = new();
+        [SerializeField] LerpControlledBob m_JumpBob = new();
         [SerializeField] float m_StepInterval;
         [SerializeField] AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] AudioClip m_JumpSound;           // the sound played when character leaves the ground.
@@ -127,8 +127,6 @@ namespace SpaceCape.FirstPersonCharacter {
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
-
             timeScale.RestoreTimeScale();
         }
 
@@ -216,6 +214,12 @@ namespace SpaceCape.FirstPersonCharacter {
         }
 
         void RotateView() {
+            m_MouseLook.UpdateCursorLock();
+
+            if (!m_MouseLook.cursorIsLocked) {
+                return;
+            }
+
             m_MouseLook.LookRotation(transform, m_Camera.transform);
         }
 
